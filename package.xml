@@ -1,24 +1,15 @@
 <?xml version="1.0"?>
 <package format="3">
   <name>diff_drive_controller</name>
-  <version>2.51.0</version>
-  <description>Controller for a differential-drive mobile base.</description>
+  <version>0.0.0</version>
+  <description>BoxyGo diff_drive_controller</description>
+  <maintainer email="boxygo.mail@gmail.com">BoxyGo Team</maintainer>
+  <license>Apache-2.0</license>
 
-  <maintainer email="bence.magyar.robotics@gmail.com">Bence Magyar</maintainer>
-  <maintainer email="denis@stoglrobotics.de">Denis Štogl</maintainer>
-  <maintainer email="christoph.froehlich@ait.ac.at">Christoph Froehlich</maintainer>
-  <maintainer email="sai.kishor@pal-robotics.com">Sai Kishor Kothakota</maintainer>
-
-  <license>Apache License 2.0</license>
-
-  <url type="website">https://control.ros.org</url>
-  <url type="bugtracker">https://github.com/ros-controls/ros2_controllers/issues</url>
-  <url type="repository">https://github.com/ros-controls/ros2_controllers/</url>
-
-  <author email="bence.magyar.robotics@gmail.com">Bence Magyar</author>
-  <author>Enrique Fernández</author>
-  <author>Manuel Meraz</author>
-  <author email="jordan.palacios@pal-robotics.com">Jordan Palacios</author>
+  <depend>controller_manager</depend>
+  <depend>ros2_control</depend>
+  <depend>ros2_controllers</depend>
+  <depend>controller_manager_msgs</depend>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
   <build_depend>generate_parameter_library</build_depend>
@@ -45,3 +36,4 @@
     <build_type>ament_cmake</build_type>
   </export>
 </package>
+
