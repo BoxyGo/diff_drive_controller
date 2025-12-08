@@ -153,7 +153,6 @@ controller_interface::return_type DiffDriveController::update(
     double right_feedback_mean = 0.0;
     if (params_.odom_middle_wheel_calc)
     {
-      RCLCPP_ERROR(logger, ">>> USING ONLY ONE (MIDDLE) WHEEL ODOMETRY");
       size_t idx = 0;
       if (params_.wheels_per_side > 0)
       {
@@ -238,6 +237,7 @@ controller_interface::return_type DiffDriveController::update(
         left_feedback_mean * left_wheel_radius * period.seconds(),
         right_feedback_mean * right_wheel_radius * period.seconds(), time);
     }
+    ////////////////////////////////////////////////////////////////////////
   }
 
   tf2::Quaternion orientation;
