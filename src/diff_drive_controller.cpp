@@ -179,6 +179,18 @@ controller_interface::return_type DiffDriveController::update(
 
       left_feedback_mean = left_feedback;
       right_feedback_mean = right_feedback;
+      if (params_.show_log)
+      {
+        double left_feedback_x = left_feedback_mean * left_wheel_radius;
+        double right_feedback_x = right_feedback_mean * right_wheel_radius;
+        RCLCPP_INFO(
+          logger,
+          "Feedback x: left = %.6f, right = %.6f (%s)",
+          left_feedback_x,
+          right_feedback_x,
+          feedback_type()
+        );
+      }
     }
     else
     {
@@ -203,6 +215,19 @@ controller_interface::return_type DiffDriveController::update(
 
       left_feedback_mean /= static_cast<double>(params_.wheels_per_side);
       right_feedback_mean /= static_cast<double>(params_.wheels_per_side);
+      if (params_.show_log)
+      {
+        double left_feedback_x = left_feedback_mean * left_wheel_radius;
+        double right_feedback_x = right_feedback_mean * right_wheel_radius;
+        RCLCPP_INFO(
+          logger,
+          "Feedback x: left = %.6f, right = %.6f (%s)",
+          left_feedback_x,
+          right_feedback_x,
+          feedback_type()
+        );
+      }
+
     }
     ////////////////////////////////////////////////////////////////////////
     // double left_feedback_mean = 0.0;
