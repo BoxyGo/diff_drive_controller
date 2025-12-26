@@ -17,3 +17,4 @@ Enable middle-wheel odometry in your controller config:
 diff_drive_controller:
   ros__parameters:
     odom_middle_wheel_calc: true
+    show_log: true
