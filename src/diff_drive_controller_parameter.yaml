@@ -35,7 +35,7 @@ diff_drive_controller:
     description: "If true, odometry is computed from the middle wheel per side instead of averaging over all wheels.",
   }
 
-  display_log: {
+  show_log: {
     type: bool,
     default_value: false,
     description: "If true, show log messages.",
